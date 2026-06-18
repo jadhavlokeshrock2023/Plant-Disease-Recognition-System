@@ -3,6 +3,10 @@ import tensorflow as tf
 import numpy as np
 import json
 import matplotlib.pyplot as plt
+import os
+
+st.write("Current Directory:", os.getcwd())
+st.write("Files:", os.listdir("."))
 
 
 # --------------------------------------------------
