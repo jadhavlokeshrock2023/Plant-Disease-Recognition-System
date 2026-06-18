@@ -4,7 +4,13 @@ import numpy as np
 import json
 import matplotlib.pyplot as plt
 import os
+
 import streamlit as st
+
+
+st.write("Current Directory:", os.getcwd())
+st.write("Files:", os.listdir("."))
+
 
 st.write("Current Directory:", os.getcwd())
 st.write("Files:", os.listdir("."))
