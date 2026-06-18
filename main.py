@@ -6,7 +6,9 @@ import matplotlib.pyplot as plt
 import os
 
 import streamlit as st
+import zipfile
 
+print(zipfile.is_zipfile("trained_plant_disease_model.keras"))
 
 
 
