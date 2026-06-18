@@ -3,7 +3,11 @@ import tensorflow as tf
 import numpy as np
 import json
 import matplotlib.pyplot as plt
+import os
+import streamlit as st
 
+st.write("Current Directory:", os.getcwd())
+st.write("Files:", os.listdir("."))
 
 # --------------------------------------------------
 # PAGE CONFIG
@@ -23,9 +27,12 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     return tf.keras.models.load_model(
-        "trained_plant_disease_model.keras"
-    )
+         "trained_plant_disease_model.keras" 
+         )
 
+import os
+
+st.write("Current files:", os.listdir("."))
 
 model = load_model()
 
