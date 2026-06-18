@@ -8,12 +8,7 @@ import os
 import streamlit as st
 
 
-st.write("Current Directory:", os.getcwd())
-st.write("Files:", os.listdir("."))
 
-
-st.write("Current Directory:", os.getcwd())
-st.write("Files:", os.listdir("."))
 
 # --------------------------------------------------
 # PAGE CONFIG
@@ -30,15 +25,31 @@ st.set_page_config(
 # LOAD MODEL
 # --------------------------------------------------
 
-@st.cache_resource
-def load_model():
-    return tf.keras.models.load_model(
-         "trained_plant_disease_model.keras" 
-         )
+# --------------------------------------------------
+# LOAD MODEL
+# --------------------------------------------------
 
 import os
 
-st.write("Current files:", os.listdir("."))
+@st.cache_resource
+def load_model():
+
+    st.write("Current Directory:", os.getcwd())
+
+    files = os.listdir(".")
+    st.write("Files in Repository:")
+    st.write(files)
+
+    model_path = "trained_plant_disease_model.keras"
+
+    if not os.path.exists(model_path):
+        st.error(f"❌ Model file NOT found: {model_path}")
+        st.stop()
+
+    st.success(f"✅ Model file found: {model_path}")
+
+    return tf.keras.models.load_model(model_path)
+
 
 model = load_model()
 
