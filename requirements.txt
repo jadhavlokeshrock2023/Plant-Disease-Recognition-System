@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 tensorflow
 scikit-learn==1.3.0
 numpy==1.24.3
@@ -6,13 +6,7 @@ matplotlib==3.7.2
 seaborn==0.13.0
 pandas==2.1.0
 streamlit
-=======
-tensorflow
-scikit-learn==1.3.0
-numpy==1.24.3
-matplotlib==3.7.2
-seaborn==0.13.0
-pandas==2.1.0
-streamlit
->>>>>>> 3095f700fca2265ea905ae1af8b60886dd1869ad
+
+
+
 librosa==0.10.1
