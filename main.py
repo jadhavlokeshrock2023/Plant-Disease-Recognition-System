@@ -42,7 +42,7 @@ def load_model():
     st.write("Files in Repository:")
     st.write(files)
 
-    model_path = "trained_plant_disease_model.keras"
+   model_path = "plant_model.h5"
 
     if not os.path.exists(model_path):
         st.error(f"❌ Model file NOT found: {model_path}")
